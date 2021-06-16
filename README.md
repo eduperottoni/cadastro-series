@@ -20,7 +20,7 @@
 
 > <h3>O que você precisa pra rodar o app na sua máquina?</h3>
 
-1. Baixe o código desse <a href='https://github.com/eduperottoni/cadastro-series'>repositório</a>  ou clone (caso fizer o download em ZIP, descomprimir o arquivo) 
+1. Baixe o código desse <a href='https://github.com/eduperottoni/cadastro-series/tree/master'>repositório</a>  ou clone (caso fizer o download em ZIP, descomprimir o arquivo) 
 2. Faça o <a href='https://dotnet.microsoft.com/download'>download do SDK do .NET</a> versão 5.0
 3. Pelo seu terminal ou explorador de arquivos, entre na pasta cadastro-series-main. 
       - Se preferir seguir pelo terminal, basta digitar o seguinte comando:
