@@ -32,10 +32,18 @@ namespace Series
             retorno += $"Titulo: {this.Titulo + Environment.NewLine}";
             retorno += $"Descricao: {this.Descricao + Environment.NewLine}";
             retorno += $"Ano de Início: {this.Ano + Environment.NewLine}";
-            retorno += $"Status; {this.Excluido}";
+            retorno += $"Excluída? {this.Excluido}";
             return retorno;
         }
 
+        public string retornaDescricao()
+        {
+            return this.Descricao;
+        }
+        public int retornaAno()
+        {
+            return this.Ano;
+        }
         public string retornaTitulo()
         {
             return this.Titulo;
