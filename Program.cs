@@ -20,13 +20,13 @@ namespace Series
                         InserirSerie();
                         break;
                     case "3":
-                        //AtualizarSerie();
+                        AtualizarSerie();
                         break;
                     case "4":
                         ExcluirSerie();
                         break;
                     case "5":
-                        //VizualizaSerie();
+                        VisualizarSerie();
                         break;
                     case "C":
                         Console.Clear();
@@ -36,6 +36,15 @@ namespace Series
                 }
                 opcaoUsuario = ObterOpcaoUsuario();                  
             }
+            Console.WriteLine("Obrigado por utilizar nossos serviços!");
+        }
+        
+        private static void VisualizarSerie()
+        {
+            Console.WriteLine("Digite o ID da série a ser visualizada: ");
+            int id = int.Parse(Console.ReadLine());
+            var serie = repositorio.RetornaPorId(id);
+            Console.WriteLine(serie);
         }
         private static void ExcluirSerie()
         {
@@ -57,13 +66,13 @@ namespace Series
             {
                 Console.WriteLine($"[{i}] {Enum.GetName(typeof(Genero),i)}");
             }
-            Console.WriteLine($"Digite para qual gênero você quer alterar (gênero atual: {lista[id].retornaTitulo()}):");
+            Console.WriteLine($"[Gênero atual: {lista[id].retornaTitulo()}] | Novo gênero:");
             int entradaGenero = int.Parse(Console.ReadLine());
-            Console.WriteLine("Digite o novo título da série (título atual: {}): "); //Paramos aqui!!!
+            Console.WriteLine($"[Título atual: {lista[id].retornaTitulo()}] | Novo título: "); //Paramos aqui!!!
             string entradaTitulo = Console.ReadLine();
-            Console.WriteLine("Digite o ano em que a série foi lançada: ");
+            Console.WriteLine($"[Ano de lançamento atual: {lista[id].retornaAno()}] | Novo ano de lançamento: ");
             int entradaAno = int.Parse(Console.ReadLine());
-            Console.WriteLine("Digie a descrição da Série: ");
+            Console.WriteLine($"[Descrição atual: {lista[id].retornaDescricao()}] | Nova descrição: ");
             string entradaDescricao = Console.ReadLine();
 
             Serie serieAtualizada = new Serie(id:id,
